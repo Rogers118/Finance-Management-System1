@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_URL = process.env.REACT_APP_API_URL || 'https://github.com/Rogers118/Finance-Management-System1.git';
 
 const api = axios.create({
-    baseURL: `${API_URL}/api`,
+    baseURL: 'https://github.com/Rogers118/Finance-Management-System1.git',
 });
 
 api.interceptors.request.use(config => {
