@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://finance-management-system-1-1g55.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || 'https://budget-tracker-backend-9v7m.onrender.com';
 
 const api = axios.create({
-    baseURL: 'https://finance-management-system-1-1g55.onrender.com',
+    baseURL: 'https://budget-tracker-backend-9v7m.onrender.com',
 });
 
 api.interceptors.request.use(config => {
