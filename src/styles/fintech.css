@@ -1,0 +1,351 @@
+/* fintech.css — Professional FinTech theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+:root {
+    --bg: #0f1724;
+    /* deep navy */
+    --panel: #0b1220;
+    /* slightly lighter */
+    --muted: #9aa4b2;
+    --text: #e6eef8;
+    --accent: #2563eb;
+    /* blue */
+    --accent-2: #0ea5a4;
+    /* teal */
+    --danger: #ef4444;
+    --glass: rgba(255, 255, 255, 0.03);
+    --card-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(180deg, var(--bg), #071026 180%);
+    color: var(--text);
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 28px;
+    min-height: 100vh;
+    padding: 28px;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    background: linear-gradient(180deg, var(--panel), #071126);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-nav button {
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    text-align: left;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.sidebar-nav button:hover {
+    background: var(--glass);
+    color: var(--text);
+    transform: translateX(6px);
+    transition: all .18s ease
+}
+
+.logout-btn {
+    margin-top: auto;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+
+/* Main */
+
+.dashboard-main {
+    padding: 0 12px;
+    overflow: auto;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text)
+}
+
+.dashboard-header p {
+    margin: 6px 0 18px;
+    color: var(--muted)
+}
+
+
+/* cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.card h3 {
+    margin: 0;
+    color: var(--muted);
+    font-weight: 600
+}
+
+.card .value {
+    margin-top: 10px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.2px
+}
+
+.value.green {
+    color: #10b981
+}
+
+.value.red {
+    color: var(--danger)
+}
+
+
+/* forms */
+
+.forms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px
+}
+
+.form-box {
+    background: var(--panel);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: var(--card-shadow)
+}
+
+.form-box h3 {
+    margin-top: 0;
+    color: var(--muted)
+}
+
+
+/* transactions */
+
+.transactions {
+    background: var(--panel);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px
+}
+
+
+/* charts */
+
+.charts .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.chart-box {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 18px;
+    border-radius: 12px
+}
+
+
+/* insights */
+
+.insights {
+    margin-top: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+
+/* AI Chat floating button */
+
+.ai-float-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: var(--accent);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.ai-panel {
+    position: fixed;
+    right: 30px;
+    bottom: 110px;
+    width: 360px;
+    background: #061022;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 12px 36px rgba(2, 6, 23, 0.7);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.ai-panel .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    color: var(--muted)
+}
+
+.msgs {
+    max-height: 320px;
+    overflow: auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.msg {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 85%
+}
+
+.msg.user {
+    align-self: flex-end;
+    background: linear-gradient(90deg, var(--accent), #4f46e5);
+    color: white
+}
+
+.msg.bot {
+    align-self: flex-start;
+    background: linear-gradient(90deg, #0b2130, #082028);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.02)
+}
+
+.input-row {
+    display: flex;
+    gap: 8px
+}
+
+.input-row input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: transparent;
+    color: var(--text)
+}
+
+.input-row button {
+    background: var(--accent-2);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+
+/* responsiveness */
+
+@media (max-width:1000px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        padding: 16px
+    }
+    .sidebar {
+        order: 2;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+        padding: 12px
+    }
+    .sidebar-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        overflow: auto
+    }
+    .forms {
+        grid-template-columns: 1fr
+    }
+    .cards {
+        grid-template-columns: 1fr
+    }
+    .ai-panel {
+        right: 16px;
+        left: 16px;
+        width: auto
+    }
+}
