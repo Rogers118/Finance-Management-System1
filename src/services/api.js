@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://github.com/Rogers118/Finance-Management-System1.git';
+const API_URL = process.env.REACT_APP_API_URL || 'https://finance-management-system-1-1g55.onrender.com';
 
 const api = axios.create({
-    baseURL: 'https://github.com/Rogers118/Finance-Management-System1.git',
+    baseURL: 'https://finance-management-system-1-1g55.onrender.com',
 });
 
 api.interceptors.request.use(config => {
